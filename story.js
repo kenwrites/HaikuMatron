@@ -2,6 +2,7 @@ var questions = 3;
 
 questions -= 1;
 var questionsLeft = "[" + questions + " questions left]";
+var twoSylNoun1 = prompt("Enter a 2-syllable noun. " + questionsLeft);
 
 questions -= 1;
 var questionsLeft = "[" + questions + " questions left]";
