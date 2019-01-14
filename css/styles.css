@@ -1,7 +1,32 @@
 body {
-    
+
 }
 
 #poem {
+
+    /* Centering vertically 
     
+    If poem is placed inside another block element, 
+    parent element must have position: relative for
+    below code to work
+    
+    */
+
+    position: absolute;           
+    top: 50%;
+    height: 7.5em;
+    margin-top:  -3.75em;
+
+    /* Styling text */
+
+    text-align: center;
+    font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    line-height: 1.5em;  
+
+
+
+}
+
+.border{
+    border: 1px solid black;
 }
