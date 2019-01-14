@@ -1,5 +1,5 @@
-body {
-
+html, body {
+    height: 100%;
 }
 
 #poem {
@@ -8,7 +8,7 @@ body {
     
     If poem is placed inside another block element, 
     parent element must have position: relative for
-    below code to work
+    below code to work.
     
     */
 
@@ -22,8 +22,6 @@ body {
     text-align: center;
     font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
     line-height: 1.5em;  
-
-
 
 }
 
