@@ -24,11 +24,24 @@ html, body {
     /* Styling text */
 
     text-align: center;
-    font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-    line-height: 1.5em;  
+    font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
 
 }
 
 .border{
     border: 1px solid black;
+}
+
+/* Responsive design */
+
+@media (max-width: 830px) {
+    #poem {
+        font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    }
+}
+
+@media (max-width: 600px) {
+    #poem {
+        font: normal 1em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    }
 }
