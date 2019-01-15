@@ -1,48 +1,52 @@
+/* Main styles --------------------------------------------------------------- */
+
 #left-sidebar {
     position: absolute;  /* must be absolute for centering text box child */
     left: 0;
+    box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
+
 }
 
 #right-sidebar {
     position: absolute; 
     right: 0;
+    box-shadow: inset 2px 4px 10px -3px rgba(0,0,0,.8);
 }
 
 #left-sidebar-text {
     
     writing-mode: vertical-lr;
     text-orientation:  upright;
-    font: normal 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     text-align: center;
-
 }
 
 #right-sidebar-text {
     writing-mode: vertical-rl;
-    font: normal 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     text-align: center;
+    letter-spacing: .2em;
+    white-space: nowrap;   /* Prevents breaking 'Haiku-Matron' over two lines */
 }
 
 #poem {
 
-    /* Styling text */
-
     text-align: center;
     font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     text-shadow: 1px 1px 2px rgba(0,0,0,.2);
-
-    
-    /* Styling box */
-
+ 
     padding: 10px;
     border-radius: 0 30px;
-    box-shadow: 2px 4px 10px -6px rgba(255,255,255,.8), 
-        inset 2px 4px 10px -3px rgba(0,0,0,.8);
-
+    box-shadow: inset 2px 4px 10px -3px rgba(0,0,0,.8), 
+        inset 0px 0px 10px -3px rgba(0,0,0,.6);
 
 }
 
 /* Re-usable style classes -------------------------------------------- */
+
+.sidebar-text {
+    font: italic 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+
+}
 
 .sidebar {
     width: 15%;
@@ -54,17 +58,15 @@
 
 .tiny-text {
     font: normal 1rem/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    letter-spacing: initial;
 }
 
 .center {
 
-    /* Centering
-    
-    If block is placed inside another block element, 
-    then parent element must have position: relative for
-    below code to work.  (Default position: static 
-    may work, too.)
-    
+    /*    
+    If block with class="center" is placed inside another 
+    block element, then parent element must have position: relative for
+    below code to work.  (Default position: static may work, too.)
     */
     
     position: absolute;           
@@ -73,7 +75,7 @@
     transform:  translate(-50%, -50%);    
 }
 
-/* Responsive design ----------------------------------------------------- */
+/* Responsive selectors ----------------------------------------------------- */
 
 html, body {
     height: 100%;
@@ -108,12 +110,12 @@ html, body {
 
 @media (max-height: 500px) {
     #left-sidebar-text {
-        font: normal 2em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+        font: italic 2em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     }
 }
 
 @media (max-height: 420px) {
     #left-sidebar-text {
-        font: normal 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+        font: italic 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     }
 }
