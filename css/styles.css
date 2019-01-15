@@ -2,20 +2,24 @@ html, body {
     height: 100%;
 }
 
+/* #poem-container { */
+/* } */
+
 #poem {
 
     /* Centering vertically 
     
     If poem is placed inside another block element, 
     parent element must have position: relative for
-    below code to work.
+    below code to work.  (Default position: static 
+    may work, too.)
     
     */
-
+    
     position: absolute;           
     top: 50%;
-    height: 7.5em;
-    margin-top:  -3.75em;
+    left: 50%;
+    transform:  translate(-50%, -50%);
 
     /* Styling text */
 
