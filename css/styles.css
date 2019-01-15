@@ -1,50 +1,29 @@
-html, body {
-    height: 100%;
+#left-sidebar {
+    position: absolute;  /* must be absolute for centering text box child */
+    left: 0;
 }
 
-#main {
-    height: 100%;
+#right-sidebar {
+    position: absolute; 
+    right: 0;
 }
 
-#left-header {
-    width: 15%;
-    height:  100%;
-    position: absolute;
-
-}
-
-#left-header-text {
+#left-sidebar-text {
     
-    /* Formatting text */
-
     writing-mode: vertical-lr;
     text-orientation:  upright;
     font: normal 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     text-align: center;
 
-    /* Centering */
+}
 
-    position: absolute;           
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%, -50%);
+#right-sidebar-text {
+    writing-mode: vertical-rl;
+    font: normal 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    text-align: center;
 }
 
 #poem {
-
-    /* Centering
-    
-    If poem is placed inside another block element, 
-    parent element must have position: relative for
-    below code to work.  (Default position: static 
-    may work, too.)
-    
-    */
-    
-    position: absolute;           
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%, -50%);
 
     /* Styling text */
 
@@ -63,11 +42,46 @@ html, body {
 
 }
 
-.border{
+/* Re-usable style classes -------------------------------------------- */
+
+.sidebar {
+    width: 15%;
+    height:  100%;
+}
+.border {
     border: 1px solid black;
 }
 
-/* Responsive design */
+.tiny-text {
+    font: normal 1rem/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+}
+
+.center {
+
+    /* Centering
+    
+    If block is placed inside another block element, 
+    then parent element must have position: relative for
+    below code to work.  (Default position: static 
+    may work, too.)
+    
+    */
+    
+    position: absolute;           
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);    
+}
+
+/* Responsive design ----------------------------------------------------- */
+
+html, body {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+}
 
 @media (max-width: 830px) {
     #poem {
@@ -90,4 +104,16 @@ html, body {
         
     }
 
+}
+
+@media (max-height: 500px) {
+    #left-sidebar-text {
+        font: normal 2em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    }
+}
+
+@media (max-height: 420px) {
+    #left-sidebar-text {
+        font: normal 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    }
 }
