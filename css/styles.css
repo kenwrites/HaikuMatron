@@ -1,5 +1,9 @@
 /* Main styles --------------------------------------------------------------- */
 
+body {
+    margin: 0;  /* eliminates default 8px margin */
+}
+
 #bg-color-transparent {
     width: 100%;
     height: 100%;
