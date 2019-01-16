@@ -10,6 +10,7 @@
     position: absolute;  /* must be absolute for centering text box child */
     left: 0;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
+    padding: 5px;
 
 }
 
@@ -17,6 +18,7 @@
     position: absolute; 
     right: 0;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.8);
+    padding: 5px;
 }
 
 #left-sidebar-text {
@@ -73,6 +75,18 @@ header {
     height:  100%;
 }
 
+.font-size-5vh {
+    font-size: 5vh;
+}
+.font-size-6vh {
+    font-size: 6vh;
+}
+.font-size-7vh {
+    font-size: 7vh;
+}
+.font-size-7vmin {
+    font-size: 7vmin;
+}
 
 .border {
     border: 1px solid black;
@@ -86,6 +100,14 @@ header {
 .bg-parchment {
     background: rgba(128, 73, 21, 1) url("../img/old-yellow-and-brown-parchment-paper.png") no-repeat top / cover;
     background-color: rgba(128, 73, 21, .5);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    white-space: normal;
 }
 
 .center {
@@ -116,8 +138,9 @@ html, body {
     #poem {
         font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
         border-radius: 0 20px;
-
     }
+
+
 }
 
 @media (max-width: 500px) {
@@ -152,14 +175,22 @@ html, body {
 
 /* Shrink sidebar text for short displays */
 
-@media (max-height: 500px) {
-    #left-sidebar-text {
+/* @media (max-height: 500px) {
+    /* .left-sidebar-text {
         font: italic 2em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-    }
-}
+    } */
 
-@media (max-height: 420px) {
-    #left-sidebar-text {
-        font: italic 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    /* .font-size-5vh {
+        font-size: 5vh;
     }
-}
+} */ */
+
+/* @media (max-height: 420px) {
+    /* #left-sidebar-text {
+        font: italic 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    } */
+
+    /* .font-size-5vh {
+        font-size: 5vh;
+    }
+} */ */
