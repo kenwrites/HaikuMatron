@@ -10,15 +10,14 @@
     position: absolute;  /* must be absolute for centering text box child */
     left: 0;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
-    padding: 5px;
-
+    padding; 5px 0px;
 }
 
 #right-sidebar {
     position: absolute; 
     right: 0;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.8);
-    padding: 5px;
+    padding; 5px 0px;
 }
 
 #left-sidebar-text {
@@ -61,6 +60,14 @@ header {
     padding: 15px;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
     display: none;
+}
+
+#credits {
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    text-align: center;
+    color: white;
 }
 
 /* Re-usable style classes -------------------------------------------- */
@@ -173,8 +180,6 @@ html, body {
 
 }
 
-/* Shrink sidebar text for short displays */
-
 /* @media (max-height: 500px) {
     /* .left-sidebar-text {
         font: italic 2em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
@@ -183,14 +188,10 @@ html, body {
     /* .font-size-5vh {
         font-size: 5vh;
     }
-} */ */
+} */ 
 
-/* @media (max-height: 420px) {
-    /* #left-sidebar-text {
-        font: italic 1.75em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-    } */
-
-    /* .font-size-5vh {
-        font-size: 5vh;
+@media (max-height: 420px) {
+    #credits {
+        font-size: .7em;
     }
-} */ */
+}
