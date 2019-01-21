@@ -1,6 +1,6 @@
 /* Main styles --------------------------------------------------------------- */
 
-body {
+body { 
     margin: 0;  /* eliminates default 8px margin */
 }
 
@@ -11,7 +11,7 @@ body {
 }
 
 #left-sidebar {
-    position: absolute;  /* must be absolute for centering text box child */
+    position: absolute;  
     left: 0;
     box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
     padding: 5px 0px;
@@ -95,12 +95,6 @@ header {
     display: none;
 }
 
-.font-size-5vh {
-    font-size: 5vh;
-}
-.font-size-6vh {
-    font-size: 6vh;
-}
 .font-size-7vh {
     font-size: 7vh;
 }
@@ -120,14 +114,6 @@ header {
 .bg-parchment {
     background: rgba(128, 73, 21, 1) url("../img/old-yellow-and-brown-parchment-paper.png") no-repeat top / cover;
     background-color: rgba(128, 73, 21, .5);
-}
-
-.nowrap {
-    white-space: nowrap;
-}
-
-.wrap {
-    white-space: normal;
 }
 
 .center {
@@ -154,17 +140,6 @@ html, body {
     height: 100%;
 }
 
-
-
-
-/* @media (min-width: 830px) {
-    #poem {
-        font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-        border-radius: 0 20px;
-    }
-
-
-} */
 
 @media (min-width: 500px) {
     #poem-container {
