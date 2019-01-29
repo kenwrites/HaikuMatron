@@ -24,6 +24,6 @@ function get_random_index(upper) {
 // Select and print random poem
 
 poem_index = get_random_index(poem_array.length);
-poem = poem_array[poem_index] + "<br><nav id='poem-nav'><a href='./index.html'>Home</a><a href='#'>Next Poem</a></nav>";
+poem = poem_array[poem_index] + "<br><nav class='poem-nav'><a href='./index.html' class='a-btn'>Home</a><a href='#' class='a-btn'>Next Poem</a></nav>";
 print_poem(poem);
 
