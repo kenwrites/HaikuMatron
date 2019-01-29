@@ -146,10 +146,12 @@ header {
     margin: 5px 0;
 }
 
-.poem-nav a {
+.poem-nav a,
+.poem-nav button {
     display: inline-block;
     padding: 5px 10px;
     font-size: 1rem;
+    border: none;  /* prevents browser from giving buttons a default border */
 }
 
 .poem-nav a:not(:first-child) {
