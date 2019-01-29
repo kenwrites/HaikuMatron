@@ -9,46 +9,49 @@
   <meta name="viewport" content="width=device-width">  <!-- This instructs the device to make the "width" property the same as the device's actual width.  In other words, it makes 1px actually 1/96th of an inch.  Useful for avoiding issues caused by zooming the viewport on mobile devices.  -->
 </head>
 <body>
-  <div id="main" class="bg-parchment">
-    <div id="bg-color-transparent" class="bg-color-primary-3">         
+  <div id="viewport" class="bg-parchment">
+    <div id="bg-color-transparent">         
 
       <!-- Header -->
 
-      <header class="bg-color-primary-1 vert-pad-30px">
+      <header class="bg-color-primary-1-tp vert-pad-30px">
         Haphazard Haiku<br>
-        <span class="tiny-text">A collection of inconsequential poetry.</span>
+        <span class="tiny-text">Silly haiku and limerick stuff.</span>
       </header>
 
       <!-- Left sidebar  -->
 
-      <div id="left-sidebar" class="bg-color-primary-1 sidebar"> 
+      <div id="left-sidebar" class="bg-color-primary-1-tp sidebar"> 
         <div id="left-sidebar-text" class="center sidebar-text font-size-7vh">Haphazard</div>
       </div>
       
       <!-- Right sidebar -->
 
-      <div id="right-sidebar" class="bg-color-primary-1 sidebar">
+      <div id="right-sidebar" class="bg-color-primary-1-tp sidebar">
         <div id="right-sidebar-text" class="center sidebar-text font-size-7vmin">
           Haiku<br>
           <span class="tiny-text">A collection of inconsequential poetry.</span>
         </div>
       </div>
 
-      <div id="poem-container">
-        <div id="poem" class="poem bg-color-primary-1 center">
-       
-        
-          <!-- Test poem text:  -->
-          
-          <!-- Ever tardy was our man Nate<br>
-          &apos;til he slipped and then broke his pate.<br>
-          It did not give us pause<br>
-          when that hearse got lost:<br>    
-          to his own funeral he was late. -->
-                
-        </div> 
-      </div>
+      <!-- Home page navigation cards -->
 
+      <nav id="home-nav">
+        <div class="nav-card card bg-color-primary-1-tp">
+          <a href="./my-poems.html">Poems</a>
+          A collection of<br>
+          inconsequential poems<br>
+          by Ken (that is me).
+        </div>
+        <div class="nav-card card bg-color-primary-1-tp">
+          <a href="./madlibs.html">HaikuMatron</a>
+          HaikuMatron makes<br>
+          new haiku.  Do not ask how.<br>
+          Probably magic.  
+        </div>
+      </nav>
+  
+      
       <div id="credits">
           Background image courtesy of <br> <a href=https://www.myfreetextures.com>www.myfreetextures.com</a>.
       </div>
