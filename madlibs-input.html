@@ -14,29 +14,29 @@
 
       <!-- Header -->
 
-      <header class="bg-color-primary-1">
+      <header id="header" class="bg-color-primary-1">
         Haiku Madlibs<br>
         <span class="tiny-text">Sage wisdom, on demand</span>
       </header>
 
       <!-- Left sidebar  -->
 
-      <div id="left-sidebar" class="bg-color-primary-1 sidebar"> 
+      <header id="left-sidebar" class="bg-color-primary-1 sidebar"> 
         <div id="left-sidebar-text" class="center sidebar-text left-sidebar-text nowrap font-size-5vh">Haiku Madlibs</div>
-      </div>
+      </header>
       
       <!-- Right sidebar --> 
 
-      <div id="right-sidebar" class="bg-color-primary-1 sidebar">
+      <header id="right-sidebar" class="bg-color-primary-1 sidebar">
         <div id="right-sidebar-text" class="center sidebar-text font-size-6vh">
           Sage wisdom, on demand
         </div>
-      </div>
+      </header>
       
       <!-- Poem -->
       
       <div id="poem-container">
-        <div id="form-box" class="bg-color-primary-1 center form-box card">
+        <main id="form-box" class="bg-color-primary-1 center form-box card">
           <form action="madlibs.html" method="POST">
             
             <label for="noun-1">Enter a two-syllable noun:</label>
@@ -51,14 +51,14 @@
             <input type="submit" class="submit-btn">
           
           </form>
-        </div>
-      </div>
+        </main>
+      </div> <!-- poem-container -->
 
       <div id="credits">
         Background image courtesy of <br> <a href=https://www.myfreetextures.com>www.myfreetextures.com</a>.
       </div>
       
-    </div>
-  </div>
+    </div> <!-- bg-color transparent -->
+  </div> <!-- viewport -->
 </body>
 </html>

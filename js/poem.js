@@ -45,5 +45,3 @@ poem_btn.addEventListener('click', function(event) {
 });
 
 
-
-
