@@ -4,6 +4,7 @@ var input = {
     one_syl_adj: ""
 };
 var poem;
+const poem_btn = document.getElementById("next-mad-btn");
 
 function build_madlib(words) {
     var madlib_html = '';
@@ -11,12 +12,19 @@ function build_madlib(words) {
     return madlib_html;
 }
 
-// Get user input 
-input.two_syl_noun1 = prompt("Enter a noun with two syllables");
-input.two_syl_noun2 = prompt("Enter another noun with two syllables");
-input.one_syl_adj = prompt("Enter an adjective with only one syllable.");
+function print_madlib() {
+    input.two_syl_noun1 = prompt("Enter a noun with two syllables");
+    input.two_syl_noun2 = prompt("Enter a gerund with two syllables");
+    input.one_syl_adj = prompt("Enter an adjective with only one syllable.");
+    poem = build_madlib(input);
+    print_poem(poem);
+}
 
-// Build and print poem
-poem = build_madlib(input);
-print_poem(poem);
+// Print 1st madlib 
+print_madlib();
 
+// Build and print new poem on button click
+
+poem_btn.addEventListener ( "click", function(event) {
+    print_madlib();    
+});
