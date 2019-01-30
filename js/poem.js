@@ -6,8 +6,9 @@ var poem_array = [
         "Website has menu.<br>Why?  Is this the start of a<br>grand meal? Likely not.",
         "'But why?' walker asks.<br>Runner shrugs, tightens laces,<br>stretches, and begins."
     ];
-var poem_index;
-var poem;
+var last_poem_index;
+const poem_btn = document.getElementById("next-p-btn");
+
 
 // Functions 
 
@@ -21,9 +22,28 @@ function get_random_index(upper) {
     return random_number;
 }
 
-// Select and print random poem
+function print_rand_poem() {
 
-poem_index = get_random_index(poem_array.length);
-poem = poem_array[poem_index] + "<br><nav class='poem-nav'><a href='./index.html' class='a-btn'>Home</a><a href='#' class='a-btn'>Next Poem</a></nav>";
-print_poem(poem);
+    var poem_index;
+    var poem;
+    // last_poem_index = poem_index;
+
+    poem_index = get_random_index(poem_array.length);
+    poem = poem_array[poem_index];
+    print_poem(poem);
+
+}
+
+// Select and print random poem on page load
+
+print_rand_poem();
+
+// Select and print random poem on click
+
+poem_btn.addEventListener('click', function(event) {
+    print_rand_poem();
+});
+
+
+
 
