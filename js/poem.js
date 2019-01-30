@@ -12,11 +12,6 @@ const poem_btn = document.getElementById("next-p-btn");
 
 // Functions 
 
-function print_poem(poem_html) {
-    var poem_box = document.getElementById("poem");
-    poem_box.innerHTML = poem_html;
-}
-
 function get_random_index(upper) {
     var random_number = Math.floor(Math.random() * upper);
     return random_number;
