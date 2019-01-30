@@ -9,7 +9,6 @@ var poem_array = [
 var last_poem_index;
 const poem_btn = document.getElementById("next-p-btn");
 
-
 // Functions 
 
 function get_random_index(upper) {
@@ -21,11 +20,19 @@ function print_rand_poem() {
 
     var poem_index;
     var poem;
-    // last_poem_index = poem_index;
-
-    poem_index = get_random_index(poem_array.length);
-    poem = poem_array[poem_index];
-    print_poem(poem);
+    do {
+        poem_index = get_random_index(poem_array.length);
+        console.log("poem_index = " + poem_index);
+        if (poem_index !== last_poem_index) {
+            console.log("index accepted");
+            last_poem_index = poem_index;
+            poem = poem_array[poem_index];
+            print_poem(poem);
+            break;
+        } else {
+            console.log("index rejected");
+        }
+    } while (true);
 
 }
 
