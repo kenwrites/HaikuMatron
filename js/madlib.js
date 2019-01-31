@@ -12,10 +12,21 @@ function build_madlib(words) {
     return madlib_html;
 }
 
+function get_input(question) {
+    var response;
+    do {
+        if (response === null || response === '') {
+            alert ("Please enter a word.");
+        }
+        response = prompt(question);
+    } while (response === null || response === '')
+    return response;
+}
+
 function print_madlib() {
-    input.two_syl_noun1 = prompt("Enter a noun with two syllables");
-    input.two_syl_noun2 = prompt("Enter a gerund with two syllables.  (A gerund is a noun that is made from a verb.  Think 'swimming', as in 'I love swimming.'.  'Thanksgiving' is a gerund.  So is the 'dancing' in 'square-dancing'.)");
-    input.one_syl_adj = prompt("Enter an adjective with only one syllable.");
+    input.two_syl_noun1 = get_input("Enter a noun with two syllables");
+    input.two_syl_noun2 = get_input("Enter a gerund with two syllables.  (A gerund is a noun that is made from a verb.  Think 'swimming', as in 'I love swimming.'.  'Thanksgiving' is a gerund.  So is the 'dancing' in 'square-dancing'.)");
+    input.one_syl_adj = get_input("Enter an adjective with only one syllable.");
     poem = build_madlib(input);
     print_poem(poem);
 }
