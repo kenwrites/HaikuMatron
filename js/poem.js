@@ -31,11 +31,14 @@ function print_rand_poem() {
     } while (true);
 }
 
+
 function shrink_big_poems() {
     if (poem.textContent.length > 100) {
-        poem.className = 'long-poem';
+        if (!poem.classList.contains('long-poem')) {
+            poem.classList.add('long-poem');
+        }
     } else {
-        poem.className = '';
+        poem.classList.remove('long-poem');
     }
 }
 
@@ -50,7 +53,3 @@ poem_btn.addEventListener('click', function(event) {
     print_rand_poem();
     shrink_big_poems();
 });
-
-
-
-
