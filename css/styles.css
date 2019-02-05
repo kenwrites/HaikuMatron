@@ -120,7 +120,8 @@ body {
     /* Font */
     text-align: center;
     font: normal 1.25em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-
+    /* padding-left: 1.5rem; 
+    padding-right: 1.5rem; */
 }
 
 /* Home page nav, and also default button styles-----------------------*/
@@ -139,13 +140,14 @@ body {
 
 .a-btn {
     line-height: 2em;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     text-decoration: none;
     background-color: #172556;
     border-radius: 0 10px 0 10px;
     color: #eceef5;
     margin: 5px 0;
     font-weight: bold;
+    border: none;
 }
 
 /* Styling Poem Nav ------------------------------------------ */
@@ -188,9 +190,8 @@ label {
     display: block;
 }
 
-.submit-btn {
+.form-submit-btn {
     margin: 2em 0 1em 0;
-    color: black;
 }
 
 /* Re-usable style classes ----------------------------------- */
@@ -313,7 +314,7 @@ html, body {
     }
 
     .form-box {
-     
+        padding: 1.5rem;
         /* Font */
         font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
      
