@@ -6,9 +6,9 @@ A website with silly haiku and limerick toys.
 
 Complete:
 - Haphazard Haiku - spits out poems I've written, one at a time.
+- Home page
 
 In progress:
-- Home page 
 - The HaikuMatron - generates mildy-plausible haiku based on templates and an array of words organized by number of syllables.
 
 Future: 
