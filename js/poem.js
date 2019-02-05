@@ -8,8 +8,6 @@ var poem_array = [
     ];
 var last_poem_index;
 const poem_btn = document.querySelector("#next-p-btn");
-const poem = document.querySelector('#poem');
-
 
 // Functions 
 
