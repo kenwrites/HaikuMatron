@@ -69,6 +69,7 @@ body {
 
 .poem {
     padding: 10px 10px 5px;
+    min-height: 21.375rem;
 
     /* Font */
     text-align: center;
@@ -136,8 +137,16 @@ body {
 /* Styling Poem Nav ------------------------------------------ */
 
 .poem-nav {
+
+    /* Stick to bottom, and center */
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px);
+
+    /* Style text & shape */
     text-align: center;
     margin: 5px 0;
+
 }
 
 .poem-nav a,
@@ -257,9 +266,11 @@ html, body {
     } 
         
     .poem {
-     
-        /* Font */
         font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    }
+
+    .long-poem {
+        font-size: .85em;
     }
 
     .card {
@@ -302,16 +313,29 @@ html, body {
 
 }
 
+@media (min-width: 650px) {
+    .long-poem {
+        font-size: .95em;
+    };
+}
+
 @media (min-width: 830px) {
     .poem {
         font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+        min-height: 25rem;
     }
 
     .card {
         border-radius: 0 30px;
     }
 
+    .long-poem {
+        font-size: .85em;
+    }
+
 }
+
+
 
 @media (min-height: 420px) {
     #credits {
