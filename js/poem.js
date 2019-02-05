@@ -10,6 +10,7 @@ var last_poem_index;
 const poem_btn = document.querySelector("#next-p-btn");
 const poem = document.querySelector('#poem');
 
+
 // Functions 
 
 function get_random_index(upper) {
@@ -45,11 +46,11 @@ function shrink_big_poems() {
 // Select and print random poem on page load
 
 print_rand_poem();
-shrink_big_poems();
+window.setTimeout( () => {shrink_big_poems()}, delay);
 
 // Select and print random poem on click
 
 poem_btn.addEventListener('click', function(event) {
     print_rand_poem();
-    shrink_big_poems();
+    window.setTimeout( () => {shrink_big_poems()}, delay);
 });
