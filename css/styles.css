@@ -16,6 +16,18 @@ body {
     opacity: .80;
 }
 
+#header {
+    font: italic 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    text-align: center;
+    padding: 15px;
+    box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
+    height: 150px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 #left-sidebar {
     position: absolute;  
     left: 0;
@@ -52,7 +64,7 @@ body {
     /* This element is only used on screens under width 500px, to 
     properly center the poem card */
 }
-    
+
 .card { 
 
     /* Shape */
@@ -66,7 +78,24 @@ body {
 
 }
 
-.poem {
+#credits {
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: .7em;
+
+}
+
+/* Styling poem output box --------------------------- */
+
+#poem-main {
+    display: none;
+}
+
+.poem-card {    
+
     padding: 10px 10px 5px;
     min-height: 21.375rem;
     width: 75vw;
@@ -78,50 +107,26 @@ body {
 
 }
 
-#poem {
+#poem-output { 
+
     /* Fade text in and out */
-    transition: color .3s ease-in-out;
-    transition: text-shadow .3s ease-in-out;
-
-}
-
-#header {
-    font: italic 2.5em/1 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
-    text-align: center;
-    padding: 15px;
-    box-shadow: inset 0px 0px 10px -3px rgba(0,0,0,.6);
-    height: 150px;
-    box-sizing: border-box;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-#credits {
-    position: absolute;
-    width: 95%;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    font-size: .7em;
+    transition: color .4s ease-in-out;
+    transition: text-shadow .4s ease-in-out;
 
 }
 
 
-#color-btn {
-    display: block;
-    margin: 0 auto;
-}
+
 
 /* Styling Madlib input form ------------------------ */
 
-.form-box {
+#form-main {
  
     /* Font */
     text-align: center;
     font: normal 1.25em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-    /* padding-left: 1.5rem; 
-    padding-right: 1.5rem; */
+    
+
 }
 
 /* Home page nav, and also default button styles-----------------------*/
@@ -131,7 +136,9 @@ body {
     text-align: center;
     font: normal 1em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     padding: .5em 1em 1em;
+    width: calc(100vw - 32px);
     max-width: 390px;
+
 }
 
 #home-nav a {
@@ -298,7 +305,7 @@ html, body {
         
     }
 
-    .poem {
+    .poem-card {
         font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
         width: 50vw;
         max-width: 31.25rem;
@@ -313,7 +320,7 @@ html, body {
 
     }
 
-    .form-box {
+    #form-main {
         padding: 1.5rem;
         /* Font */
         font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
@@ -337,7 +344,7 @@ html, body {
 }
 
 @media (min-width: 830px) {
-    .poem {
+    .poem-card {
         font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
         min-height: 25rem;
     }
@@ -362,7 +369,7 @@ html, body {
 }
 
 @media (max-height: 420px) {
-    .form-box {
+    #form-main {
         font: normal 1em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
 
     }

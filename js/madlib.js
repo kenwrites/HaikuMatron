@@ -1,41 +1,54 @@
+// Form constants
+
+const form_main = document.querySelector('#form-main')
+const noun_input_1 = document.querySelector('#noun-1')
+const noun_input_2 = document.querySelector('#noun-2')
+const adj_input_1 = document.querySelector('#adj-1')
+const make_poem_btn = document.querySelector('#make-poem-btn')
+
+// Poem display constants
+
+const poem_main = document.querySelector('#poem-main')
+const next_mad_btn = document.querySelector('#next-mad-btn')
+
+// Variables
+
+var madlib
 var input = {
     two_syl_noun1: "",
     two_syl_noun2: "",
-    one_syl_adj: ""
+    one_syl_adj1: ""
 };
-var poem;
-const poem_btn = document.getElementById("next-mad-btn");
+
+// Functions
+
+function get_words() {
+    input.two_syl_noun1 = noun_input_1.value
+    noun_input_1.value = ''
+    input.two_syl_noun2 = noun_input_2.value
+    noun_input_2.value = ''
+    input.two_syl_adj1 = adj_input_1.value
+    adj_input_1.value = ''
+}
 
 function build_madlib(words) {
-    var madlib_html = '';
-    madlib_html += "There is no " + words.two_syl_noun1 + "<br>that can capture my " + words.two_syl_noun2 + "<br>for you, my " + words.one_syl_adj + " one.";
+    let madlib_html = '';
+    madlib_html += "There is no " + words.two_syl_noun1 + "<br>that can capture my " + words.two_syl_noun2 + "<br>for you, " + words.two_syl_adj1 + " one.";
     return madlib_html;
 }
 
-function get_input(question) {
-    var response;
-    do {
-        if (response === null || response === '') {
-            alert ("Please enter a word.");
-        }
-        response = prompt(question);
-    } while (response === null || response === '')
-    return response;
-}
+// Program
 
-function print_madlib() {
-    input.two_syl_noun1 = get_input("Enter a noun with two syllables");
-    input.two_syl_noun2 = get_input("Enter a gerund with two syllables.  (A gerund is a noun that is made from a verb.  Think 'swimming', as in 'I love swimming.'.  'Thanksgiving' is a gerund.  So is the 'dancing' in 'square-dancing'.)");
-    input.one_syl_adj = get_input("Enter an adjective with only one syllable.");
-    poem = build_madlib(input);
-    print_poem(poem);
-}
+make_poem_btn.addEventListener('click', () => {
+    get_words()
+    madlib = build_madlib(input)
+    form_main.style.display = 'none'    
+    poem_main.style.display = 'unset'
+    print_poem(madlib)    
+})
 
-// Print 1st madlib 
-print_madlib();
+next_mad_btn.addEventListener('click', () => {
+    poem_main.style.display = 'none'
+    form_main.style.display = 'unset'
+})
 
-// Build and print new poem on button click
-
-poem_btn.addEventListener ( "click", function(event) {
-    print_madlib();    
-});

@@ -5,11 +5,14 @@ A website with silly haiku and limerick toys.
 ## What's here? 
 
 Complete:
-- Haphazard Haiku - spits out poems I've written, one at a time.
 - Home page
+- Haphazard Haiku - spits out poems I've written, one at a time.
+- The HaikuMatron - generates mildy-plausible haiku based on templates I've written combined with input from the user.  (think madlibs)
 
 In progress:
-- The HaikuMatron - generates mildy-plausible haiku based on templates and an array of words organized by number of syllables.
+- Better placement of poems, based on their character- and line-counts.
+- More consistent button placement in HaikuMatron.  They jump around too much.  
+- Add more templates to the HaikuMatron.  Single template gets old quickly.
 
 Future: 
 - Module to teach users how to write haiku
