@@ -1,5 +1,6 @@
 const poem_output = document.querySelector('#poem-output');
 var delay = 400;
+var element;
 
 // Functions 
 
@@ -20,3 +21,14 @@ function print_poem(poem_html) {
 
 }
 
+function hide(element) {
+    let classes = element.classList
+    if (!classes.contains('hide')) {
+        classes.add('hide')
+    }
+}
+
+function show(element) {
+    let classes = element.classList
+    classes.remove('hide')
+}

@@ -43,7 +43,6 @@ body {
 }
 
 #left-sidebar-text {
-    
     writing-mode: vertical-lr;
     text-orientation:  upright;
     text-align: center;
@@ -66,6 +65,9 @@ body {
 }
 
 .card { 
+
+    font-family: 'Inknut Antiqua', "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    font-weight: 300;
 
     /* Shape */
     border-radius: 0 10px;
@@ -90,10 +92,6 @@ body {
 
 /* Styling poem output box --------------------------- */
 
-#poem-main {
-    display: none;
-}
-
 .poem-card {    
 
     padding: 10px 10px 5px;
@@ -103,30 +101,27 @@ body {
 
     /* Font */
     text-align: center;
-    font: normal 1.25em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-
+    /* font: normal 1.25em/1.5;   */
 }
 
 #poem-output { 
-
     /* Fade text in and out */
     transition: color .4s ease-in-out;
     transition: text-shadow .4s ease-in-out;
-
 }
-
-
-
 
 /* Styling Madlib input form ------------------------ */
 
 #form-main {
- 
     /* Font */
     text-align: center;
-    font: normal 1.25em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-    
+    /* font-size: 1.1em; */
+    line-height: 1.65;  
+    font-weight: 300;   
+}
 
+input {
+    max-width: calc(100% - 1rem);
 }
 
 /* Home page nav, and also default button styles-----------------------*/
@@ -134,11 +129,10 @@ body {
 .nav-card {
     margin: 2rem auto;
     text-align: center;
-    font: normal 1em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+    font: normal 1em/1.5 'Inknut Antiqua', "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
     padding: .5em 1em 1em;
     width: calc(100vw - 32px);
     max-width: 390px;
-
 }
 
 #home-nav a {
@@ -153,6 +147,7 @@ body {
     border-radius: 0 10px 0 10px;
     color: #eceef5;
     margin: 5px 0;
+    font-family: 
     font-weight: bold;
     border: none;
 }
@@ -221,7 +216,7 @@ label {
 }
 
 .font-size-5vh {
-    font-size: 5vh;
+    font-size: 5.5vh;
 }
 .font-size-6vh {
     font-size: 6vh;
@@ -270,6 +265,14 @@ label {
     white-space: nowrap;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: unset;
+}
+
 /* Responsive selectors ----------------------------------------------------- */
 
 html, body {
@@ -279,7 +282,6 @@ html, body {
 #viewport {
     height: 100%;
 }
-
 
 @media (min-width: 500px) {
 
@@ -306,7 +308,7 @@ html, body {
     }
 
     .poem-card {
-        font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+        font-size: 1.3em;
         width: 50vw;
         max-width: 31.25rem;
     }
@@ -315,16 +317,13 @@ html, body {
     #home-nav {
         padding-top: 2rem;
     }
+
     .nav-card {
         width: 50%;
-
     }
 
     #form-main {
-        padding: 1.5rem;
-        /* Font */
-        font: normal 1.5em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
-     
+        padding: 1.5rem;  
     }
 
     .sidebar, .sidebar-text {
@@ -345,8 +344,8 @@ html, body {
 
 @media (min-width: 830px) {
     .poem-card {
-        font: normal 2em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
         min-height: 25rem;
+        font-size: 1.5em;
     }
 
     .card {
@@ -356,7 +355,6 @@ html, body {
     .long-poem {
         font-size: .85em;
     }
-
 }
 
 
@@ -365,12 +363,11 @@ html, body {
     #credits {
         font-size: 1em;
     }
-
 }
 
 @media (max-height: 420px) {
     #form-main {
-        font: normal 1em/1.5 "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;  
+        /* font: normal 1em/1.5 'Inknut Antiqua', "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;   */
 
     }
 } 
