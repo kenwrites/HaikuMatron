@@ -93,21 +93,54 @@ body {
 /* Styling poem output box --------------------------- */
 
 .poem-card {    
+    /* Flex layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    /* Shape */
     padding: 10px 10px 5px;
     min-height: 21.375rem;
     width: 75vw;
-    /* max-width: 31.25rem; */
 
     /* Font */
     text-align: center;
+
+    /* Uncomment below for Book Antiqua */
     /* font: normal 1.25em/1.5;   */
 }
 
 #poem-output { 
+    /* Make <nav> sticky footer */
+    margin-top: auto;
+    margin-bottom: auto;
+
     /* Fade text in and out */
     transition: color .5s ease-in-out;
     transition: text-shadow .5s ease-in-out;
+}
+
+/* Styling Poem Nav ------------------------------------------ */
+
+.poem-nav {
+
+    /* Stick to bottom, and center */
+    margin-top: auto;
+
+
+    /* Style text & shape */
+    text-align: center;
+    margin: 5px 0;
+
+}
+
+.poem-nav a,
+.poem-nav button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1.15rem;
+    border: none;  /* prevents browser from giving buttons a default border */
+    margin: 5px 8px;
 }
 
 /* Styling Madlib input form ------------------------ */
@@ -152,29 +185,7 @@ input {
     border: none;
 }
 
-/* Styling Poem Nav ------------------------------------------ */
 
-.poem-nav {
-
-    /* Stick to bottom, and center */
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 20px);
-
-    /* Style text & shape */
-    text-align: center;
-    margin: 5px 0;
-
-}
-
-.poem-nav a,
-.poem-nav button {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 1.15rem;
-    border: none;  /* prevents browser from giving buttons a default border */
-    margin: 5px 8px;
-}
 
 /* User-action styles for buttons --------------- */
 
@@ -184,6 +195,7 @@ input {
 
 .a-btn:active {
     transform: translate(-1px, 2px);
+    background-color: #7A86AD;   /* For touch devices which don't support translate() and :hover */
 }
 
 /* Forms -------------------------------------------- */
@@ -283,7 +295,7 @@ html, body {
     height: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 
     #poem-container {
         position: unset;      /* re-centers poem in whole page, not poem-container */
@@ -297,7 +309,7 @@ html, body {
 
         /* Shape */
         border-radius: 0 20px;
-        padding: 10px;
+        padding: 10px 20px;
         width: unset;
 
         /* Shadows */
