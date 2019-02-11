@@ -44,11 +44,12 @@ make_poem_btn.addEventListener('click', () => {
     madlib = build_madlib(input)
     hide(form_main)
     show(poem_main)
-    print_poem(madlib)    
+    $poem_output.fadeOut(0)
+    print_poem(madlib)
+    $poem_output.fadeIn()    
 })
 
 next_mad_btn.addEventListener('click', () => {
     show(form_main)
     hide(poem_main)
 })
-

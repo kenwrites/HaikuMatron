@@ -24,7 +24,11 @@ function print_rand_poem() {
         if (poem_index !== last_poem_index) {
             last_poem_index = poem_index;
             poem = poem_array[poem_index];
-            print_poem(poem);
+            $poem_output.fadeOut()
+            window.setTimeout( () => {
+                print_poem(poem);
+            }, delay, poem)
+            $poem_output.fadeIn()
             break;
         } 
     } while (true);
@@ -33,9 +37,7 @@ function print_rand_poem() {
 // Select and print random poem on page load
 
 print_rand_poem();
-window.setTimeout( () => {
-    shrink_big_poems()
-}, delay)
+shrink_big_poems()
 
 // Select and print random poem on click
 

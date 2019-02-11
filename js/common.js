@@ -6,10 +6,7 @@ var delay = 400;
 // Functions 
 
 function print_poem(poem_html) {
-    $poem_output.fadeOut().fadeIn()
-    window.setTimeout( (poem_html) => {
-        $poem_output.html(poem_html)
-    }, delay, poem_html)
+    $poem_output.html(poem_html)
 }
 
 function hide(element) {
