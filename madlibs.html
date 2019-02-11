@@ -39,7 +39,7 @@
       <div id="poem-container">
 
         <main id="form-main" class="poem-card bg-color-primary-1 center card">
-          <form>
+          <form id="madlib-form">
             
             <label for="noun-1">Enter a two-syllable noun:</label>
             <input id="noun-1" name="two-syl-noun-1">
@@ -50,9 +50,12 @@
             <label for="adj-1">Enter a two-syllable adjective:</label>
             <input id="adj-1" name="two-syl-adj-1"> <br>
 
-            <button type="button" id="make-poem-btn" class="form-submit-btn a-btn" >Make Poem</button>
-          
           </form>
+          
+            <nav class="poem-nav">
+              <button type="button" id="make-poem-btn" class="form-submit-btn a-btn" >Make Poem</button>
+            </nav>
+
         </main> <!-- form-main -->
 
         <main id="poem-main" class="hide poem-card bg-color-primary-1 card center">

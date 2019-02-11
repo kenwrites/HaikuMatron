@@ -124,7 +124,7 @@ body {
 
 .poem-nav {
 
-    /* Stick to bottom, and center */
+    /* Stick to bottom */
     margin-top: auto;
 
 
@@ -134,11 +134,12 @@ body {
 
 }
 
+
+
 .poem-nav a,
 .poem-nav button {
     display: inline-block;
     padding: 5px 10px;
-    font-size: 1.15rem;
     border: none;  /* prevents browser from giving buttons a default border */
     margin: 5px 8px;
 }
@@ -174,7 +175,6 @@ input {
 
 .a-btn {
     line-height: 2em;
-    font-size: 1.25rem;
     text-decoration: none;
     background-color: #172556;
     border-radius: 0 10px 0 10px;
@@ -323,6 +323,10 @@ html, body {
         font-size: 1.3em;
         width: 50vw;
         max-width: 31.25rem;
+    }
+
+    .a-btn {
+        font-size: 1.15rem;
     }
 
     /* Home Navigation cards */

@@ -5,6 +5,7 @@ const noun_input_1 = document.querySelector('#noun-1')
 const noun_input_2 = document.querySelector('#noun-2')
 const adj_input_1 = document.querySelector('#adj-1')
 const make_poem_btn = document.querySelector('#make-poem-btn')
+const $madlib_form = $('#madlib-form')
 
 // Poem display constants
 
@@ -42,14 +43,21 @@ function build_madlib(words) {
 make_poem_btn.addEventListener('click', () => {
     get_words()
     madlib = build_madlib(input)
-    hide(form_main)
-    show(poem_main)
-    $poem_output.fadeOut(0)
-    print_poem(madlib)
-    $poem_output.fadeIn()    
+    $madlib_form.fadeOut()
+    window.setTimeout( () => {
+        hide(form_main)
+        show(poem_main)
+        $poem_output.fadeOut(0)
+        print_poem(madlib)
+        $poem_output.fadeIn()    
+    }, delay, madlib)
 })
 
 next_mad_btn.addEventListener('click', () => {
-    show(form_main)
-    hide(poem_main)
+    $poem_output.fadeOut()
+    window.setTimeout( () => {
+        hide(poem_main)
+        show(form_main)
+        $madlib_form.fadeIn() 
+    }, delay)
 })
