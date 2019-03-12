@@ -23,5 +23,5 @@ Fantasy:
 
 ## URL
 
-Netlify:  https://festive-hopper-68bb10.netlify.com/
-Github Pages:  https://kenwrites.github.io/HaikuMatron/
+[HaikuMatron on Netlify](https://festive-hopper-68bb10.netlify.com/)
+[HaikuMatron on Github Pages](https://kenwrites.github.io/HaikuMatron/)
